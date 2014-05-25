@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	h1= title
+	p Be bored with Minesweep game?
+	.container
+		.game-container
+			.grid-container
+				- for(var y = 1; y <= 8; ++y)
+					div(class='grid-row')
+						- for(var x = 1; x <= 8; ++x)
+							div(class='grid-cell')
+				.clear
+			.tile-container
+				.clear
+			.gameover
+	.footer
+		.sweep-btn 普通的按钮
+		.restart-btn 放弃治疗
